@@ -1,4 +1,4 @@
-package Recursion.StringRecursion.Recursion.String;
+package Recursion.StringRecursion;
 
 public class PalindromeString {
     public static void main(String[] args) {
