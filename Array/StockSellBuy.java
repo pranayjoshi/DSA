@@ -13,18 +13,16 @@ public class StockSellBuy {
         int buy = 0;
 
         for (int i = a.length-2; i >= 0; i--){
-            if (a[i] > a[i+1]){
+            if (a[i] > spacedArray[i+1]){
                 spacedArray[i] = a[i];
             } else {
-                spacedArray[i] = a[i+1];
+                spacedArray[i] = spacedArray[i+1];
             }
 
             if ((spacedArray[i] - a[i]) > buy) buy = a[i];
         }
 
         int sell = spacedArray[0];
-
-        System.out.println(spacedArray);
         System.out.println(buy);
         System.out.println(sell);
             
