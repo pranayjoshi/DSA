@@ -1,7 +1,7 @@
 package Sorting;
 
 public class shellshort {
-    public static void sort(Comparable[] a){
+    public static void sort(int[] a){
         int N = a.length;
 
         int h = 1;
@@ -18,12 +18,12 @@ public class shellshort {
         }
     }
 
-    public static boolean less(Comparable x, Comparable y){
-        return x.compareTo(y) < 0;
+    public static boolean less(int x, int y){
+        return x < y;
     }
 
-    public static Comparable[] exch(Comparable[] a, int i, int j){
-        Comparable temp = a[i];
+    public static int[] exch(int[] a, int i, int j){
+        int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
         return a;
