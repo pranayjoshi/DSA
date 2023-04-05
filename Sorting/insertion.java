@@ -1,13 +1,14 @@
 package Sorting;
 
 public class insertion {
-
+    public static int[] a = {3,1,2,4,0,1,3,2};
     public static void main(String[] args) {
-        int[] a = {3,1,2,4,0,1,3,2};
-        sort(a);
+        
+        sort();
+        for (int i = 0; i < a.length; i++) System.out.println(i);
     }
 
-    public static void sort(int[] a){
+    public static void sort(){
         int N = a.length;
         for (int i = 0; i<=N;i++){
             int min = i;
