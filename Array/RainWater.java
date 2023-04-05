@@ -21,15 +21,9 @@ public class RainWater {
 
         for (int i = 1; i < a.length; i++){
             left[i] = Max(left[i-1], a[i]);
-            System.out.println(left[i]);  
-            if (right[a.length -(i)] < a[a.length -(i+1)] ){
-                // System.out.println(right[a.length-(i)]);
-                right[a.length -(i+1)] = a[a.length -(i+1)];
-                // System.out.println(right[a.length-(i)]);
-            }else {
-                right[a.length -(i)] = right[a.length -(i)];
-                // System.out.println(right[a.length-(i)]);
-            }
+            // System.out.println(left[i]);
+            right[a.length -(i)] = Max(a[a.length -(i+1)], right[a.length -(i)]);
+            System.out.println(right[a.length-(i)]);
         }
 
         for (int i =0; i < a.length; i++){
