@@ -14,5 +14,6 @@ public class HashSet {
             System.out.println("no");
         }
         s.remove(10);
+        System.out.println(s.size());
     }
 }
