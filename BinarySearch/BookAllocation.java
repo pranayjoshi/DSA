@@ -45,7 +45,7 @@ public class BookAllocation {
         int res = 0;
 
         while (max >= min){
-            int mid = min+max /2;
+            int mid = (min+max) /2;
             if (isFeasible(a, key, res)){
                 res = mid;
                 max = mid-1;
