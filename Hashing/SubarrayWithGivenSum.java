@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class SubarrayWithGivenSum {
     public static void main(String[] args) {
         int[] a = {2,3,21,3,4,4,1,2,};
-        int sum = 7;
+        int sum = 24;
         unionUnsortedArray(a, sum);
     }
     static void unionUnsortedArray(int[] a, int sum){
@@ -27,7 +27,7 @@ public class SubarrayWithGivenSum {
                 end = i;
                 break;
             }
-            map.put(currSum, sum);
+            map.put(currSum, i);
         }
         if (end == -1){
             System.out.println("Notfound");

@@ -12,6 +12,8 @@ public class LargestSubWithGivenSum {
         int currSum = 0;
         int start = 0;
         int end = -1;
+        int largestLen = 0;
+        int tempStart
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -27,7 +29,7 @@ public class LargestSubWithGivenSum {
                 end = i;
                 break;
             }
-            map.put(currSum, sum);
+            map.put(currSum, i);
         }
         if (end == -1){
             System.out.println("Notfound");
