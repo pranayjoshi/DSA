@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class LargestSubWithGivenSum {
     public static void main(String[] args) {
-        int[] a = {2,3,21,3,4,4,1,2,};
-        int sum = 7;
+        int[] a = {2,3,21,3,4,4,13,1,2,};
+        int sum = 24;
         unionUnsortedArray(a, sum);
     }
     static void unionUnsortedArray(int[] a, int sum){
@@ -13,21 +13,25 @@ public class LargestSubWithGivenSum {
         int start = 0;
         int end = -1;
         int largestLen = 0;
-        int tempStart
+        int tempStart = 0;
+        int tempEnd = 0;
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i=0; i <a.length; i++){
             currSum += a[i];
             if (currSum - sum == 0) {
-                start = 0;
-                end = i;
-                break;
+                tempStart = 0;
+                tempEnd = i;
             }
             if (map.containsKey(currSum - sum)){
-                start = map.get(currSum - sum)+1;
-                end = i;
-                break;
+                tempStart = map.get(currSum - sum)+1;
+                tempEnd = i;
+                if (tempEnd - tempStart > largestLen){
+                    largestLen = tempEnd - tempStart;
+                    end = tempEnd;
+                    start = tempStart;
+                }
             }
             map.put(currSum, i);
         }
