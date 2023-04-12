@@ -5,7 +5,7 @@ public class merge {
     public static void main(String[] args) {
         
     MergeSort(0, 7);
-        for (int i = 0; i < a.length; i++) System.out.println(i);
+    for (int i = 0; i < a.length; i++) System.out.println(a[i]);
     }
 
     public static void MergeSort(int low, int high){
@@ -13,11 +13,11 @@ public class merge {
             int mid = (low+high)/2;
             MergeSort(low, mid);
             MergeSort(mid+1, high);
-            Merge(a, low, mid, high);
+            Merge(low, mid, high);
         }
     }
 
-    public static void Merge(int[] a, int low, int mid, int high){
+    public static void Merge(int low, int mid, int high){
         int i = low;
         int j = mid+1;
         int k = low;

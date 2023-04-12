@@ -5,7 +5,7 @@ public class insertion {
     public static void main(String[] args) {
         
         sort();
-        for (int i = 0; i < a.length; i++) System.out.println(i);
+        for (int i = 0; i < a.length; i++) System.out.println(a[i]);
     }
 
     public static void sort(){

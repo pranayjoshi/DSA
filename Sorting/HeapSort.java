@@ -2,7 +2,9 @@ package Sorting;
 
 public class HeapSort {
     public static int[] A = {3,1,2,4,0,1,3,2};
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        heapSort(A.length-1);
+        for (int i = 0; i < A.length; i++) System.out.println(A[i]);
         
     }
     static void Heapify(int n, int i){
@@ -25,6 +27,13 @@ public class HeapSort {
     static void buildHeap(int n){
         for (int i = n/2; i> 0; i--){
             Heapify(n, i);
+        }
+    }
+
+    static void heapSort(int n){
+        for (int i = n; i >1; i--){
+            swap(1, i);
+            Heapify(i-1, 1);
         }
     }
 
