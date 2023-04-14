@@ -19,6 +19,7 @@ public class LinkedList {
     }
 
     static void Insert(int data, Node head, int pos){
+        
         Node toAdd = new Node(data);
 
         if (pos == 0){
