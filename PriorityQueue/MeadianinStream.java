@@ -21,7 +21,7 @@ public class MeadianinStream {
                 System.out.println(-1.0 * s.peek());
             else
                 System.out.println((g.peek() - s.peek())
-                                   / 2);
+                                   / 2); 
         }
     }
  
