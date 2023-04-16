@@ -39,7 +39,7 @@ public class LinkedList {
 
     }
 
-    static void Insert(Node head, int pos){
+    static void Delete(Node head, int pos){
 
         if (pos == 0){
             head = head.next;
