@@ -39,6 +39,22 @@ public class LinkedList {
 
     }
 
+    static void Insert(Node head, int pos){
+
+        if (pos == 0){
+            head = head.next;
+            return;
+        }
+
+        Node prev = head;
+
+        for ( int i = 0; i < pos-1; i++){
+            prev = prev.next;
+        }
+        prev.next = prev.next.next;
+
+    }
+
     public static void main(String[] args) {
         Node n1 = new Node(10);
         Node n2 = new Node(20);
