@@ -56,6 +56,22 @@ public class ReverseLL {
 
     }
 
+
+    static Node Reverse(Node head){
+
+        if (head == null || head.next == null){
+            return head;
+        }
+
+        Node newHead = Reverse(head.next);
+        Node headNext = head.next;
+        headNext.next = head;
+        head.next = null;
+
+        return newHead;
+
+    }
+
     public static void main(String[] args) {
         Node n1 = new Node(10);
         Node n2 = new Node(20);
