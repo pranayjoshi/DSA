@@ -37,7 +37,7 @@ public class PalindromeLL {
 
         Node mid = middle(head);
 
-        Node last = Reverse(mid.next);
+        Node last = Reverse(mid);
 
         Node curr = head;
 
