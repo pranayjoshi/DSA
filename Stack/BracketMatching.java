@@ -47,13 +47,13 @@ public class BracketMatching {
     }
 
     static boolean isMatching( char a, char b) {
-        System.out.println(a);
-        System.out.println(b);
-        if ((a == '{' && b == '}')){
-            System.out.println("cool");
-        } else {
-            System.out.println("not cool");
-        }
+        // System.out.println(a);
+        // System.out.println(b);
+        // if ((a == '{' && b == '}')){
+        //     System.out.println("cool");
+        // } else {
+        //     System.out.println("not cool");
+        // }
         return (a == '(' && b == ')') || (a == '{' && b == '}') || (a == '[' && b == ']');
     }
 }
