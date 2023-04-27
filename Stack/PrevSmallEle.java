@@ -15,12 +15,9 @@ public class PrevSmallEle {
 
     public static void PrevSmall(){
 
-        Result[0] = -1;
-        s.push(A[0]);
+        for ( int i = 0 ; i < A.length; i++){
 
-        for ( int i = 1 ; i < A.length; i++){
-
-            while (s.isEmpty() && A[i] <= s.peek()){
+            while (!s.isEmpty() && A[i] <= s.peek()){
                 s.pop();
             }
 
