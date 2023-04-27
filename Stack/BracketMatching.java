@@ -26,14 +26,17 @@ public class BracketMatching {
             if (isOpening(curr)){
                 s.push(curr);
             }
-
-            if (s.isEmpty()){
-                return false;
-            } else if (!isMatching(curr, s.peek())){
-                return false;
-            } else {
-                s.pop();
+            else {
+                if (s.isEmpty()){
+                    return false;
+                } else if (!isMatching(s.peek(), curr)){
+                    
+                    return false;
+                } else {
+                    s.pop();
+                }
             }
+            
 
         }
         return s.isEmpty();
@@ -44,6 +47,13 @@ public class BracketMatching {
     }
 
     static boolean isMatching( char a, char b) {
+        System.out.println(a);
+        System.out.println(b);
+        if ((a == '{' && b == '}')){
+            System.out.println("cool");
+        } else {
+            System.out.println("not cool");
+        }
         return (a == '(' && b == ')') || (a == '{' && b == '}') || (a == '[' && b == ']');
     }
 }
