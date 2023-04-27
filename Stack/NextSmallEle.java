@@ -15,7 +15,7 @@ public class NextSmallEle {
 
     public static void PrevSmall(){
 
-        for ( int i = 0 ; i < A.length; i++){
+        for ( int i = A.length-1; i > 0 ; i--){
 
             while (!s.isEmpty() && A[i] <= s.peek()){
                 s.pop();
