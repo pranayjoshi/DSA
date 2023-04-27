@@ -30,16 +30,5 @@ public class PrevSmallEle {
             }
             s.push(A[i]);
         }
-        
-        
-        s.push(20);
-        s.push(30);
-        
-        while (s.isEmpty()){
-            System.out.println(s.peek());
-            s.pop();
-        }
-
-        System.out.println(s.size());
     }
 }
