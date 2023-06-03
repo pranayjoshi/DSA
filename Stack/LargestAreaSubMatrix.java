@@ -78,8 +78,9 @@ public class LargestAreaSubMatrix {
                     curRow[j] = 0;
                 }
             }
+            int curAns = MaxHist(curRow);
+            System.out.println(Math.max(maxAns, curAns));
         }
-        int curAns = MaxHist(curRow);
-        System.out.println(Math.max(maxAns, curAns));
+        
     }
 }
