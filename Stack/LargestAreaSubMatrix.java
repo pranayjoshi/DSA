@@ -74,6 +74,8 @@ public class LargestAreaSubMatrix {
                 if (A[i][j] ==1){
                     curRow[j] += 1;
 
+                } else {
+                    curRow[j] = 0;
                 }
             }
         }
