@@ -16,7 +16,20 @@ public class InfixToPostfix {
             
             char element = x.charAt(i);
             if (!St.empty()){
-                if ( isOperator(St.peek) || )
+                if ( isOperator(St.peek()) && isOperator(element)){
+                    if (isHigherPrecedence(St.peek(), element)){
+                        System.out.println(St.pop());
+
+                    }
+                    St.push(element);
+                }
+            } else {
+                if (isOperator(element)){
+                    St.push(element);
+                }
+            }
+            if (isOpeningBracket(element)){
+                St.push(element);
             }
             
         }
