@@ -41,8 +41,8 @@ public class InfixToPostfix {
         return a == ')';
     }
 
-    static boolean isOpeningBracket() {
-
+    static boolean isOpeningBracket(char a) {
+        return a == '(';
     }
 
 }
