@@ -2,7 +2,7 @@ package Queue;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.Stack;
+// import java.util.Stack;
 
 public class StackUsingQueue {
     static Queue<Integer> q1 = new ArrayDeque<Integer>();
