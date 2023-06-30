@@ -9,6 +9,8 @@ public class BinaryTree {
 		sc = new Scanner(System.in);
 		
 		Node root = createTree();
+        HeightTree(root);
+		System.out.println();
 	}
 	
 	static Node createTree() {
@@ -29,6 +31,11 @@ public class BinaryTree {
 		
 		return root;
 	}
+
+    static int HeightTree(Node root){
+
+        if (root == null )
+    }
 }
 
 class Node {
