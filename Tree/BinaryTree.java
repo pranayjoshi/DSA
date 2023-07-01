@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class BinaryTree {
 	
 	static Scanner sc = null;
+    // static int counter = 0;
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		
 		Node root = createTree();
-        HeightTree(root);
-		System.out.println();
+        int s = HeightTree(root);
+		System.out.println(s);
 	}
 	
 	static Node createTree() {
@@ -33,8 +34,9 @@ public class BinaryTree {
 	}
 
     static int HeightTree(Node root){
+        if (root == null) return 0;
+        return Math.max(HeightTree(root.left), HeightTree(root.right))+1;
 
-        if (root == null )
     }
 }
 
