@@ -35,7 +35,7 @@ public class MaxBinaryTree {
 
     static int MaxTree(Node root){
         if (root == null) return 0;
-        return Math.max(MaxTree(root), Math.max(MaxTree(root.left), MaxTree(root.right)));
+        return Math.max(root.data, Math.max(MaxTree(root.left), MaxTree(root.right)));
     }
 }
 
