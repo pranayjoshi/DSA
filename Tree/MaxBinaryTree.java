@@ -2,7 +2,7 @@ package Tree;
 
 import java.util.Scanner;
 
-public class SizeBinaryTree {
+public class MaxBinaryTree {
 	
 	static Scanner sc = null;
     // static int counter = 0;
@@ -10,7 +10,7 @@ public class SizeBinaryTree {
 		sc = new Scanner(System.in);
 		
 		Node root = createTree();
-        int x = SizeTree(root);
+        int x = MaxTree(root);
         System.out.println(x);
 	}
 	
@@ -33,9 +33,9 @@ public class SizeBinaryTree {
 		return root;
 	}
 
-    static int SizeTree(Node root){
+    static int MaxTree(Node root){
         if (root == null) return 0;
-        return SizeTree(root.left) + SizeTree(root.right) +1;
+        return Math.max(MaxTree(root), Math.max(MaxTree(root.left), MaxTree(root.right)));
     }
 }
 
