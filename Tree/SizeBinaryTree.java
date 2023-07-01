@@ -30,6 +30,11 @@ public class SizeBinaryTree {
 		
 		return root;
 	}
+
+    static int SizeTree(Node root){
+        if (root == null) return 0;
+        return SizeTree(root.left) + SizeTree(root.right) +1;
+    }
 }
 
 class Node {
