@@ -9,9 +9,7 @@ public class BinaryTree {
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		
-		Node root = createTree();
-        int s = HeightTree(root);
-		System.out.println(s);
+		createTree();
 	}
 	
 	static Node createTree() {
@@ -32,12 +30,6 @@ public class BinaryTree {
 		
 		return root;
 	}
-
-    static int HeightTree(Node root){
-        if (root == null) return 0;
-        return Math.max(HeightTree(root.left), HeightTree(root.right))+1;
-
-    }
 }
 
 class Node {
