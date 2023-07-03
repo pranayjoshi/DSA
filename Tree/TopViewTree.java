@@ -1,6 +1,11 @@
 package Tree;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Queue;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 // import Node;
 
@@ -10,28 +15,46 @@ public class TopViewTree {
     // static int counter = 0;
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
-		
-		createTree();
+		// TopTree();
 	}
 	
-	static Node createTree() {
+	static ArrayList<Integer> TopTree(Node root) {
 		
-		Node root = null;
-		System.out.println("Enter data: ");
-		int data = sc.nextInt();
+		Queue<Pair> q = new ArrayDeque<>();
+        Map<Integer, Integer> map = new TreeMap<>();
 		
-		if(data == -1) return null;
-		
-		root = new Node(data);
-		
-		System.out.println("Enter left for " + data);
-		root.left = createTree();
-		
-		System.out.println("Enter right for "+ data);
-		root.right = createTree();
-		
-		return root;
+        q.add(new Pair(0, root));
+
+        while (!q.isEmpty()){
+            Pair cur = q.poll();
+
+            if (!map.containsKey(cur.head)){
+                map.put(cur.head, cur.node.data);
+            }
+
+            if (cur.node.left != null){
+                q.add(new Pair(cur.head -1, root.left));
+            }
+            if (cur.node.left != null){
+                q.add(new Pair(cur.head +1, root.right));
+            }
+        }
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry: map.entrySet()){
+            ans.add(entry.getValue());
+        }
+		return ans;
 	}
+
+    static class Pair {
+        int head;
+        Node node;
+        
+        public Pair(int head,Node node) {
+            this.head = head;
+            this.node = node;
+        }
+    }
 }
 
 class Node {
@@ -42,3 +65,4 @@ class Node {
 		this.data = data;
 	}
 }
+
