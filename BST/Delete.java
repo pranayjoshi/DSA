@@ -33,7 +33,7 @@ public class Delete {
             else if (root.right == null) return root.left;
             root.data = minValue(root.right);
 
-            root.right = delete(root.right, data)
+            root.right = delete(root.right, root.data);
         }
         return root;
     }
